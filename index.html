@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="./images/loho.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="back-ground vh-100 pt-5">
+        <div class="container">
+            <div class="content m-auto w-75 p-5">
+                <h1 class="text-center mb-3">Smart Login System</h1>
+                <input type="email" class="form-control mb-3" id="signinEmail" placeholder="Enter your Email">
+                <input type="password" class="form-control mb-3" id="signinPassword" placeholder="Enter your Passowrd">
+                <p class="text-center text-danger d-none" id="infoError">incorrect email or password</p>
+                <p class="text-center text-danger d-none" id="noInfo">All inputs are required</p>
+                <button class="btn btn-outline-info w-100 my-3" onclick="login()">Login</button>
+                <p class="text-center text-white">Dont have an account? <a href="./signup.html" class="text-white text-decoration-none">Sign Up</a></p>
+            </div>
+        </div>
+    </section>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>

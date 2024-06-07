@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="./images/loho.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="back-ground vh-100 pt-5">
+        <div class="container">
+            <div class="content m-auto w-75 p-5">
+                <h1 class="text-center mb-3">Smart Login System</h1>
+                <input type="text" oninput="validateClientName()" class="form-control mb-3" id="clientName" placeholder="Enter your Name">
+                <p class="text-danger d-none smallpara" id="nameError">Name must start with capital letter</p>
+                <input type="email" oninput="validateClientEmail()" class="form-control mb-3" id="clientEmail" placeholder="Enter your Email">
+                <p class="text-danger d-none smallpara" id="emailError">It's not an email</p>
+                <input type="password" oninput="validateClientPassword()" class="form-control mb-3" id="clientPassword" placeholder="Enter your Passoword">
+                <p class="text-danger d-none smallpara" id="passwordError">Password must be at least 8 characters and must contain at least one letter</p>
+                <p class="text-center text-success d-none" id="success">Success</p> 
+                <p class="text-center text-danger d-none" id="noInfo">All inputs are required</p>
+                <button class="btn btn-outline-info w-100 my-3" onclick="addClient()">Sign Up</button>
+                <p class="text-center text-white">You have an account? <a href="./index.html" class="text-white text-decoration-none">Log In</a></p>
+            </div>
+        </div>
+    </section>
+<script src="./js/bootstrap.bundle.min.js"></script>
+<script src="./js/main.js"></script>
+</body>
+</html>
