@@ -10,11 +10,20 @@ if (localStorage.getItem("client") !== null) {
 } else {
   clientList = [];
 }
+// to check all input are founded
 function noInputsOut() {
   if (clientName.value == "" || clientEmail.value == "" || clientPassword.value == "") {
       return false
   } else {
       return true
+  }
+}
+// to check if email is already used
+function emailUsed() {
+  for (var i = 0; i < clientList.length; i++) {
+      if (clientList[i].email == clientEmail.value) {
+          return false
+      }
   }
 }
 // add client
@@ -27,15 +36,21 @@ function addClient() {
   noInfo.classList.add("d-none");
 }
   let success = document.getElementById("success");
+  let emailExist = document.getElementById("emailExist");
   if (validateClientName() && validateClientEmail() && validateClientPassword()) {
     let client = {
       name: clientName.value,
       email: clientEmail.value,
       password: clientPassword.value,
-    };
+    }
+    if (emailUsed() == false) {
+      emailExist.classList.remove("d-none");
+    } else {
     clientList.push(client);
     localStorage.setItem("client", JSON.stringify(clientList));
     success.classList.remove("d-none");
+    window.location.href = "./index.html";
+    }
   }
 }
 // validation for client name
